@@ -232,10 +232,11 @@ class TestRunner implements IAsyncDelegateObserver
 
     private inline function exceptionHandler(e:Dynamic, result:TestResult):Void
     {
-        if (Std.is(e, org.hamcrest.AssertionException))
-        {
-            e = new AssertionException(e.message, e.info);
-        }
+    //error compiling hxml for as3 Unknown identifier: org
+//        if (Std.is(e, org.hamcrest.AssertionException))
+//        {
+//            e = new AssertionException(e.message, e.info);
+//        }
 
         result.executionTime = Timer.stamp() - testStartTime;
 
