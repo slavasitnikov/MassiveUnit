@@ -45,7 +45,12 @@ class TestResult
 	 * The execution time of the test in milliseconds.
 	 */
 	public var executionTime:Float;
-	
+
+	/**
+	 * Arguments for the test, or null if no args
+	 **/
+	public var args:Array<Dynamic>;
+
 	/**
 	 * The name of the test. This maps to the name of the test method.
 	 */
@@ -103,6 +108,7 @@ class TestResult
 		description = "";
 		async = false;
 		ignore = false;
+		args = null;
 		error = null;
 		failure = null;
 	}
